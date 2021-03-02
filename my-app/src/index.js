@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './style.css';
 import 'semantic-ui-css/semantic.min.css';
-import { Container, Menu, Icon, Dropdown, Image, Grid, Input, Button, List } from 'semantic-ui-react';
+import { Container, Menu, Icon, Dropdown, Image, Grid, Input, List } from 'semantic-ui-react';
 
 class TopMenu extends React.Component {
   render() {
@@ -47,10 +47,30 @@ class MiddleMenu extends React.Component {
     return (
         <Menu horizontal borderless className="middlemenu">
           <Grid centered container>
-            <Dropdown item text='MEN'/>
-            <Dropdown item text='WOMEN'/>
-            <Dropdown item text='KIDS'/>
-            <Dropdown item text='BRANDS'/>
+            <Dropdown item text='MEN'>
+              <Dropdown.Menu>
+                <Dropdown.Item>Tank Tops</Dropdown.Item>
+                <Dropdown.Item>Shirts</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+            <Dropdown item text='WOMEN'>
+              <Dropdown.Menu>
+                <Dropdown.Item>Tank Tops</Dropdown.Item>
+                <Dropdown.Item>Shirts</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+            <Dropdown item text='KIDS'>
+            <Dropdown.Menu>
+              <Dropdown.Item>Shirts</Dropdown.Item>
+              <Dropdown.Item>Onesies</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+            <Dropdown item text='BRANDS'>
+            <Dropdown.Menu>
+              <Dropdown.Item>Hawaii Domestic Market</Dropdown.Item>
+              <Dropdown.Item>Herschel Supply Co.</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
             <Menu.Item
                 name='SALE'
                 active={activeItem === 'SALE'}
